@@ -25,6 +25,7 @@ export default function SignInRoute() {
             <TextField.Input id='password' name='password' type='password' />
             <TextField.Message>{data?.errors.password}</TextField.Message>
           </TextField.Root>
+          <p className={styles.errorMessage}>{data?.errors.form}</p>
           <Button type='submit' className='button' disabled={submitting}>
             {submitting ? 'Submitting...' : 'Submit'}
           </Button>

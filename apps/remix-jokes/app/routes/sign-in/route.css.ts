@@ -21,7 +21,6 @@ export const main = style({
   borderRadius: 5,
   backgroundColor: 'white',
   boxShadow: '0 0.2rem 1rem rgba(0, 0, 0, 0.5)',
-  gap: 16,
 });
 
 export const title = style({
@@ -32,7 +31,7 @@ export const title = style({
 export const form = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: 16,
+  gap: 12,
   width: '100%',
 });
 
@@ -41,7 +40,14 @@ export const links = style({
   justifyContent: 'center',
   alignItems: 'center',
   gap: 24,
+  marginTop: 20,
   width: '100%',
 });
 
 export const link = anchor;
+
+export const errorMessage = style({
+  height: 18,
+  fontSize: 12,
+  color: theme.color.invalid,
+});

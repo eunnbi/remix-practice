@@ -8,5 +8,10 @@
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "^1.4.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "vite-plugin-lib-inject-css": "patches/vite-plugin-lib-inject-css.patch"
+    }
   }
 }

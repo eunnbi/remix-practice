@@ -1,0 +1,36 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index d0b739aceafd3782fb6935728437972118e4504f..08fa34a2c6f881beee0a704dc69508d21d3e62f7 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -109,7 +109,12 @@ ${import_picocolors.default.cyan(`[${pluginName}]`)} ${import_picocolors.default
+         for (const cssFileName of chunk.viteMetadata.importedCss) {
+           let cssFilePath = import_node_path.default.relative(import_node_path.default.dirname(chunk.fileName), cssFileName).replaceAll(/[\\/]+/g, "/");
+           cssFilePath = cssFilePath.startsWith(".") ? cssFilePath : `./${cssFilePath}`;
+-          const injection = format === "es" ? `import '${cssFilePath}';` : `require('${cssFilePath}');`;
++          let injection = format === "es" ? `import '${cssFilePath}';` : `require('${cssFilePath}');`;
++
++          if (injection.includes('assets/theme.css.ts')) {
++            injection = ''
++          }
++          
+           code = code.slice(0, position) + injection + code.slice(position);
+         }
+         chunk.code = code;
+diff --git a/dist/index.js b/dist/index.js
+index f6d610a5bc8eba30e30d9092b9dbbf8d03ed567d..d4d181524679c4c30503d0ee85fd2b3a76be5ce8 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -75,7 +75,12 @@ ${color.cyan(`[${pluginName}]`)} ${color.yellow(msg)}
+         for (const cssFileName of chunk.viteMetadata.importedCss) {
+           let cssFilePath = path.relative(path.dirname(chunk.fileName), cssFileName).replaceAll(/[\\/]+/g, "/");
+           cssFilePath = cssFilePath.startsWith(".") ? cssFilePath : `./${cssFilePath}`;
+-          const injection = format === "es" ? `import '${cssFilePath}';` : `require('${cssFilePath}');`;
++          let injection = format === "es" ? `import '${cssFilePath}';` : `require('${cssFilePath}');`;
++
++          if (injection.includes('assets/theme.css.ts')) {
++            injection = ''
++          }
++          
+           code = code.slice(0, position) + injection + code.slice(position);
+         }
+         chunk.code = code;

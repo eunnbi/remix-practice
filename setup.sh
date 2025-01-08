@@ -30,10 +30,4 @@ pnpm install
 pnpm ds build
 
 # Apply database migration
-for i in {1..5}
-do
-  pnpm app prisma:migrate && break # break if migration succeed
-  echo -e '\nFailed to migrate. Waiting for db to be ready...\n'
-  sleep 5
-done
-
+pnpm app prisma:migrate

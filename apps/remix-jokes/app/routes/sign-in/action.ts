@@ -40,13 +40,16 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const user = await login(username, password);
 
   if (user === null) {
-    return {
-      errors: {
-        username: null,
-        password: null,
-        form: 'The username or password does not match',
+    return data(
+      {
+        errors: {
+          username: null,
+          password: null,
+          form: 'The username or password does not match',
+        },
       },
-    };
+      { status: 400 }
+    );
   }
 
   const url = new URL(request.url);

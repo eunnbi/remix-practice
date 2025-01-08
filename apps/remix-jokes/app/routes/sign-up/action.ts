@@ -41,12 +41,15 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const user = await getUserByName(username);
 
   if (user) {
-    return {
-      errors: {
-        username: `User with username ${username} already exists`,
-        password: undefined,
+    return data(
+      {
+        errors: {
+          username: `User with username ${username} already exists`,
+          password: undefined,
+        },
       },
-    };
+      { status: 400 }
+    );
   }
 
   const newUser = await createUser(username, password);

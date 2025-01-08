@@ -10,7 +10,8 @@
     "format": "biome format --write ./app ./prisma",
     "lint": "eslint --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint ./app",
     "lint:fix": "eslint --fix ./app",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prisma:migrate": "pnpm prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^6.2.0",

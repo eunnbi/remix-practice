@@ -1,8 +1,12 @@
 # Remix & Monorepo Practice
 
-Remix와 Monorepo 연습용 프로젝트입니다.
-- Remix app은 [공식 튜토리얼](https://remix.run/docs/en/main/tutorials/jokes) 기반으로 제작되었습니다.
-- [Future Flag](https://remix.run/docs/en/main/start/future-flags)를 적극 활용해 최신 기능을 학습니다. 현재 **Vite**와 **Single Fetch**를 사용합니다.
+This is a practice project for Remix and Monorepo.
+
+- Remix App: Developed following the [official tutorial](https://remix.run/docs/en/main/tutorials/jokes).
+- Future Flags: Actively leveraging [Future Flags](https://remix.run/docs/en/main/start/future-flags) to explore and learn the latest features of Remix.
+   - **Vite**: Provides a fast build process and Hot Module Replacement (HMR).
+   - **Single Fetch**: Optimizes data loading by reducing network requests.
+- **Fully Tree-Shakeable**: Designed to minimize bundle size by effectively removing unused code.
 
 ## Project Structure
 
@@ -38,4 +42,3 @@ cd remix-practice
 ```
 pnpm app dev
 ```
-

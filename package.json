@@ -1,0 +1,12 @@
+{
+  "name": "remix-practice",
+  "version": "1.0.0",
+  "scripts": {
+    "ds": "pnpm --filter design-system",
+    "app": "pnpm --filter remix-jokes"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.4.1"
+  }
+}

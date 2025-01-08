@@ -9,6 +9,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
+import layerStylesUrl from '~/styles/layer.css?url';
 import typographyLargeStylesUrl from '~/styles/typography/large.css?url';
 import typographyMediumStylesUrl from '~/styles/typography/medium.css?url';
 import typographySmallStylesUrl from '~/styles/typography/small.css?url';
@@ -18,6 +19,7 @@ import * as styles from './root.css';
 import type { LinksFunction } from '@remix-run/node';
 
 export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: layerStylesUrl },
   { rel: 'stylesheet', href: resetStylesUrl },
   { rel: 'stylesheet', href: themeStylesUrl },
   { rel: 'stylesheet', href: typographySmallStylesUrl },

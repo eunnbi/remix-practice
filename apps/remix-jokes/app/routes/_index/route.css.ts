@@ -1,4 +1,4 @@
-import { theme } from '@remix-practice/design-system/styles';
+import { theme } from '@remix-practice/design-system';
 import { style } from '@vanilla-extract/css';
 
 import { anchor } from '~/styles/utils/anchor.css';

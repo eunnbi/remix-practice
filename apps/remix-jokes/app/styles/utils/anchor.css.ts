@@ -1,4 +1,4 @@
-import { theme } from '@remix-practice/design-system/styles';
+import { theme } from '@remix-practice/design-system';
 import { style } from '@vanilla-extract/css';
 
 export const anchor = style({

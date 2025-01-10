@@ -19,7 +19,7 @@ packages/
 ```
 
 ## Requirements
-- Node.js: v18 or higher
+- Node.js: v20 or higher
 - pnpm: v9 or higher
 
 ## Getting Started

@@ -7,6 +7,10 @@ import type { LoaderFunctionArgs } from '@remix-run/node';
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const userId = await getUserId(request);
   const user = userId ? await getUser(userId) : null;
-  const jokes = await getJokes();
+
+  const url = new URL(request.url);
+  const query = url.searchParams.get('query') ?? null;
+  const jokes = await getJokes({ query });
+
   return { jokes, user };
 };

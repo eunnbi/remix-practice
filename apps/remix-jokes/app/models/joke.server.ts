@@ -2,11 +2,27 @@ import { db } from '~/db.server';
 
 import type { Joke } from '@prisma/client';
 
-export const getJokes = async () => {
+export const getJokes = async ({
+  take,
+  query,
+}: { take?: number; query?: string | null } = {}) => {
   const jokes = await db.joke.findMany({
     orderBy: { createdAt: 'desc' },
     select: { id: true, name: true },
-    take: 5,
+    take,
+
+    ...(query
+      ? {
+          where: {
+            name: {
+              contains: query,
+            },
+            content: {
+              contains: query,
+            },
+          },
+        }
+      : undefined),
   });
   return jokes;
 };

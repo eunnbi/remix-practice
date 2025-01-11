@@ -2,9 +2,9 @@ import { useLoaderData } from '@remix-run/react';
 
 import { Joke } from '~/components/Joke/Joke';
 
-import { loader } from './loader';
+import { loader } from './loader.server';
 
-export { action } from './action';
+export { action } from './action.server';
 export { ErrorBoundary } from './error';
 export { loader };
 

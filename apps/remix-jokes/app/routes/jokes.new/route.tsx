@@ -3,11 +3,11 @@ import { Form, useActionData, useNavigation } from '@remix-run/react';
 
 import * as styles from './route.css';
 
-import type { action } from './action';
+import type { action } from './action.server';
 
-export { action } from './action';
+export { action } from './action.server';
 export { ErrorBoundary } from './error';
-export { loader } from './loader';
+export { loader } from './loader.server';
 
 export default function JokesNewRoute() {
   const data = useActionData<typeof action>();

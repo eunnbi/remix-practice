@@ -1,7 +1,7 @@
 import { Button } from '@remix-practice/design-system';
 import { Link, Outlet, useFetcher, useLoaderData } from '@remix-run/react';
 
-import { loader } from './loader';
+import { loader } from './loader.server';
 import * as styles from './route.css';
 
 export { loader };

@@ -1,7 +1,7 @@
 import { Button, TextField } from '@remix-practice/design-system';
 import { Form, Link, useActionData, useNavigation } from '@remix-run/react';
 
-import { action } from './action';
+import { action } from './action.server';
 import * as styles from './route.css';
 
 export { action };

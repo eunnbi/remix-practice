@@ -20,8 +20,8 @@ export const input = style({
   lineHeight: 1.5,
   selectors: {
     '&:autofill': {
-      WebkitTextFillColor: theme.color.primary,
-      caretColor: theme.color.primary,
+      WebkitTextFillColor: theme.color.secondary,
+      caretColor: theme.color.secondary,
       backgroundClip: 'text',
     },
     '&[aria-invalid=true]': {

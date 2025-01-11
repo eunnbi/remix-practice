@@ -60,5 +60,65 @@ function getJokes() {
       name: 'Elevator',
       content: `My first time using an elevator was an uplifting experience. The second time let me down.`,
     },
+    {
+      name: 'Cherry',
+      content: `I'm tired of following my dreams. I'm just going to ask them where they are going and meet up with them later.`,
+    },
+    {
+      name: 'David',
+      content: `Did you hear about the guy whose whole left side was cut off? He's all right now.`,
+    },
+    {
+      name: 'Carlson',
+      content: `Why didn’t the skeleton cross the road? Because he had no guts.`,
+    },
+    {
+      name: 'Woods',
+      content: `What did one nut say as he chased another nut?  I'm a cashew!`,
+    },
+    {
+      name: 'Holden',
+      content: `Where do fish keep their money? In the riverbank`,
+    },
+    {
+      name: 'Kelly',
+      content: `I accidentally took my cats meds last night. Don’t ask meow.`,
+    },
+    {
+      name: 'Bryan',
+      content: `Chances are if you' ve seen one shopping center, you've seen a mall.`,
+    },
+    {
+      name: 'Miller',
+      content: `I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.`,
+    },
+    {
+      name: 'Davies',
+      content: `I won an argument with a weather forecaster once. His logic was cloudy...`,
+    },
+    {
+      name: 'Pollard',
+      content: `How come the stadium got hot after the game? Because all of the fans left.`,
+    },
+    {
+      name: 'Jensen',
+      content: `"Why do seagulls fly over the ocean?" "Because if they flew over the bay, we'd call them bagels."`,
+    },
+    {
+      name: 'Guerra',
+      content: `Why was it called the dark ages? Because of all the knights.`,
+    },
+    {
+      name: 'Humphrey',
+      content: `A steak pun is a rare medium well done.`,
+    },
+    {
+      name: 'Welch',
+      content: `Why did the tomato blush? Because it saw the salad dressing.`,
+    },
+    {
+      name: 'Wilkinson',
+      content: `Did you hear the joke about the wandering nun? She was a roman catholic.`,
+    },
   ];
 }

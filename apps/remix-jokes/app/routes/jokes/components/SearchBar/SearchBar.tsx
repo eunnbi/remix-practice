@@ -1,21 +1,29 @@
 import { TextFieldInput } from '@remix-practice/design-system';
-import { useSearchParams } from '@remix-run/react';
+import { Form, useSearchParams, useSubmit } from '@remix-run/react';
 
 export const SearchBar = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const submit = useSubmit();
 
-  const query = searchParams.get('query') ?? '';
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('query');
 
   return (
-    <TextFieldInput
-      type='search'
-      name='query'
-      placeholder='Search'
-      aria-label='Search contacts'
-      value={query}
-      onChange={(e) => {
-        setSearchParams((prev) => ({ ...prev, query: e.currentTarget.value }));
+    <Form
+      onChange={(event) => {
+        const isFirstSearch = query === null;
+        submit(event.currentTarget, {
+          replace: !isFirstSearch,
+        });
       }}
-    />
+      role='search'
+    >
+      <TextFieldInput
+        type='search'
+        name='query'
+        placeholder='Search'
+        value={query ?? ''}
+        aria-label='Search contacts'
+      />
+    </Form>
   );
 };

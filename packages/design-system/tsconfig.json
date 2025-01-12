@@ -2,21 +2,26 @@
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "strict": true,
-    "allowJs": true,
-    "baseUrl": ".",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ] /* 프로젝트에 포함할 라이브러리 타입 선언 파일을 선택할 수 있다. */,
+    "skipLibCheck": true /* 선언 파일의 타입 검사를 하지 않는다. */,
+    "isolatedModules": true /* 각 파일이 다른 파일의 정보에 의존하지 않고, 독립적으로 트랜스파일될 수 있도록 보장한다. */,
+    "moduleDetection": "force" /* 프로젝트의 함수와 변수의 범위를 결정한다. force 옵션은 import와 export 구문 존재 여부 상관없이 모든 TS 파일을 스크립트가 아닌 모듈로 처리한다. */,
+    "esModuleInterop": true /* CommonJS와 ESModule 간의 호환성을 높인다. CommonJS 모듈을 ESModule에서 쉽게 가져올 수 있도록 컴파일 시 JS 코드를 추가한다. */,
+    "allowImportingTsExtensions": true /* import 문에서 타입스크립트 파일 확장자를 포함할 수 있다. */,
+    "jsx": "react-jsx" /* JSX 구문을 처리하는 방법을 지정한다. 타입스크립트는 JSX 구문의 트랜스파일링을 기본적으로 지원한다. */,
+    "moduleResolution": "Bundler" /* 각 import가 어떤 모듈을 가리키는지 해석하는 방법을 지정한다. 번들러가 처리하는 방식과 유사한 방식으로 모듈을 해석하도록 설정한다. */,
+    "resolveJsonModule": true /* JSON 파일을 TS 프로젝트로 가져올 수 있다. */,
+    "module": "ESNext" /* 트랜스파일 수행 시 사용할 모듈 시스템을 지정한다. */,
+    "target": "ESNext" /* JS 코드를 생성할 때 타겟팅하는 ECMAScript 버전을 지정한다. */,
+    "strict": true /* 엄격한 타입 검사를 활성화한다. */,
+    "noEmit": true /* JS 파일을 생성하지 말라고 지시한다. 만약 외부 도구를 사용해 트랜스파일한다면 이 옵션을 활성화해 tsc를 트랜스파일러가 아닌 린터로 활용할 수 있다. */,
+    /* Path alias */
     "paths": {
       "~/*": ["./src/*"]
-    },
-    "noEmit": true
+    }
   }
 }

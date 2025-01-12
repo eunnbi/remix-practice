@@ -23,9 +23,8 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.${format}.js`,
       formats: ['es', 'cjs'],
     },
-    cssCodeSplit: true,
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react/jsx-runtime'],
 
       // NOTE: https://rollupjs.org/configuration-options/#input
       input: Object.fromEntries(

@@ -24,7 +24,7 @@ Remix는 이제 Vite 플러그인을 지원하여 Remix와 Vite를 함께 사용
 
 ### Presets
 
-Remix Vite 플러그인은 다양한 도구와 호스팅 제공업체와의 통합을 지원하는 `presets` 옵션을 제공한다. 예를 들어, Vercel과 같은 호스팅 환경에 맞춰 Remix & Vite의 빌드 출력을 변경할 수 있어, Vendor Lock-in 문제를 완화할 수 있다.
+Remix Vite 플러그인은 다양한 도구와 호스팅 제공업체와의 통합을 지원하기 위해 `presets` 옵션을 제공한다. 예를 들어, Vercel과 같은 특정 호스팅 환경에 맞춰 Remix와 Vite의 빌드 출력을 조정할 수 있어, 특정 플랫폼에 종속되지 않고 유연한 배포 환경을 제공할 수 있다. 이를 통해 Vendor Lock-in 문제를 완화할 수 있다.
 
 ### Plugin Ecosystem
 

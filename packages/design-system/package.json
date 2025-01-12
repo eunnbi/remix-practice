@@ -14,8 +14,12 @@
     "./theme.css": "./dist/assets/theme.css.ts.css",
     "./reset.css": "./dist/assets/styles/reset.css"
   },
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "build": "vite build",
     "format": "biome format --write ./src",
@@ -32,6 +36,8 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "glob": "^11.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "^5.7.2",
     "vite": "^6.0.7",
     "vite-plugin-dts": "^4.4.0",
@@ -39,11 +45,10 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "peerDependencies": {
-    "react": ">= 19",
-    "react-dom": ">= 19"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.1",
-    "clsx": "^2.1.1"
+    "@radix-ui/react-slot": "^1.1.1"
   }
 }

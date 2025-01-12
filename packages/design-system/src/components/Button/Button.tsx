@@ -1,5 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
-import clsx from 'clsx';
+
+import { clsx } from '~/utils/clsx';
 
 import * as styles from './Button.css';
 

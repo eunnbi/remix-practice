@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import { createContext, useContext } from 'react';
+
+import { clsx } from '~/utils/clsx';
 
 import * as styles from './TextField.css';
 

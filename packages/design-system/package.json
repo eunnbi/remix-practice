@@ -7,19 +7,20 @@
   "module": "./dist/index.es.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs.js"
+      }
     },
     "./theme.css": "./dist/assets/theme.css.ts.css",
     "./reset.css": "./dist/assets/styles/reset.css"
   },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "files": ["dist"],
+  "sideEffects": ["**/*.css"],
   "scripts": {
     "build": "vite build",
     "format": "biome format --write ./src",

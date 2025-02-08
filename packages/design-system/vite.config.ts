@@ -1,3 +1,4 @@
+import { copyFileSync } from 'node:fs';
 import { extname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -13,7 +14,18 @@ export default defineConfig({
   plugins: [
     vanillaExtractPlugin(),
     react(),
-    dts({ include: ['src'] }),
+    dts({
+      include: ['src'],
+      afterBuild: async () => {
+        const files = glob.sync('dist/**/*.d.ts');
+        await Promise.all(
+          files.map(async (file) => {
+            const newFilePath = file.replace(/\.d\.ts$/, '.d.cts');
+            copyFileSync(file, newFilePath);
+          })
+        );
+      },
+    }),
     libInjectCss(), // NOTE: https://github.com/emosheeep/vite-plugin-lib-inject-css
     tsconfigPaths(),
   ],
